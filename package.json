@@ -1,0 +1,37 @@
+{
+  "name": "fastify-aws-timestream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run unit && npm run test:typescript",
+    "lint": "standard && npm run lint:typescript",
+    "lint:typescript": "ts-standard",
+    "test:typescript": "tsd",
+    "unit": "tap test/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "dependencies": {
+    "fastify-plugin": "^3.0.0",
+    "aws-sdk": "^2.1201.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "fastify-tsconfig": "^1.0.1",
+    "standard": "^17.0.0",
+    "tap": "^16.1.0",
+    "ts-standard": "^11.0.0",
+    "tsd": "^0.16.0",
+    "typescript": "^4.5.4"
+  },
+  "tsd": {
+    "directory": "test"
+  }
+}
