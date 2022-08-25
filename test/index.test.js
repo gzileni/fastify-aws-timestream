@@ -9,5 +9,17 @@ test('should register the correct decorator', async t => {
 
   await app.ready()
 
-  t.same(app.exampleDecorator(), 'decorated')
+  t.same(app.timestream(), 'decorated')
+})
+
+test('get credentials', async t => {
+  t.plan(1)
+
+  const app = require('fastify')()
+
+  app.register(require('..'))
+
+  await app.ready()
+  const credentials = await app.timestream().credentials()
+  console.log(credentials)
 })
