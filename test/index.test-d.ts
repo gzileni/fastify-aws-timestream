@@ -1,13 +1,13 @@
 import fastify from 'fastify'
-import example from '..'
+import timestream from '..'
 import { expectType } from 'tsd'
 
 let app
 try {
   app = fastify()
-  await app.ready()
-  app.register(example)
-  expectType<() => string>(app.exampleDecorator)
+  app.ready()
+  app.register(timestream)
+  expectType<() => any>(app.timestream)
 } catch (err) {
   console.error(err)
 }

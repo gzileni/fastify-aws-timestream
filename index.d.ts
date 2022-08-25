@@ -3,11 +3,11 @@ import { FastifyPluginCallback } from 'fastify'
 declare module 'fastify' {
   export interface FastifyInstance {
     // This is an example decorator type added to fastify
-    exampleDecorator: () => string
+    timestream: () => any
   }
 }
 
-declare const example: FastifyPluginCallback<() => string>
+declare const timestream: FastifyPluginCallback<() => any>
 
-export { example }
-export default example
+export { timestream }
+export default timestream
