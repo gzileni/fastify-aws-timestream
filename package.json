@@ -1,7 +1,7 @@
 {
   "name": "fastify-aws-timestream",
   "version": "1.0.0",
-  "description": "",
+  "description": "PlugIn tto send and query data from AWS TimeStream",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,31 +10,37 @@
     "test:fast": "npm run test:typescript",
     "test": "npm run lint && npm run unit && npm run test:typescript",
     "lint": "standard --fix && npm run lint:typescript",
-    "lint:typescript": "ts-standard",
+    "lint:typescript": "ts-standard --fix",
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "AWS"
+  ],
+  "author": "Giuseppe Zileni <giuseppe.zileni@gmail.com>",
   "license": "MIT",
   "types": "index.d.ts",
   "dependencies": {
-    "fastify-plugin": "^3.0.0",
     "aws-sdk": "^2.1201.0",
-    "uuid": "^8.3.2",
-    "fastify": "^4.2.1"
+    "fastify": "^4.2.1",
+    "fastify-plugin": "^3.0.0",
+    "https": "^1.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "@typescript-eslint/scope-manager": "^5.35.1",
+    "@typescript-eslint/typescript-estree": "^5.35.1",
+    "eslint": "^8.20.0",
     "fastify-tsconfig": "^1.0.1",
     "standard": "^17.0.0",
     "tap": "^16.1.0",
     "ts-standard": "^11.0.0",
-    "tsd": "^0.16.0",
-    "typescript": "^4.5.4",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "eslint": "^8.20.0"
+    "tsd": "^0.22.0",
+    "typescript": "^4.7.4"
   },
   "tsd": {
     "directory": "test"
