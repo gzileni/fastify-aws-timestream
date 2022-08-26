@@ -5,7 +5,7 @@ test('02 - create database', async t => {
   const app = require('fastify')()
   app.register(require('..'))
   await app.ready()
-  app.timeStreamWrite.createDatabase().then(result => {
+  app.timeStreamDatabase.createDatabase().then(result => {
     console.log(result)
     t.equal(result, process.env.AWS_DATABASE_NAME, `Database ${result} created successfully.`)
   }).catch(e => {

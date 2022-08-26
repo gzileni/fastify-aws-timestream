@@ -6,7 +6,7 @@ test('03 - describe database', async t => {
   app.register(require('..'))
 
   await app.ready()
-  const result = await app.timeStreamWrite.describeDatabase()
+  const result = await app.timeStreamDatabase.describeDatabase()
   console.log(result)
   t.equal(result, 'ResourceNotFoundException', `Database ${process.env.AWS_DATABASE_NAME} doesn't exists.`)
 })
