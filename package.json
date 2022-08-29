@@ -1,10 +1,6 @@
 {
   "name": "fastify-aws-timestream",
-<<<<<<< HEAD
   "version": "1.0.4",
-=======
-  "version": "1.0.3",
->>>>>>> 17405fdf3df5bff74deab872c9cb5d43c1c2678e
   "description": "Fastify plugins for managing databases, tables and querying and creating scheduled queries with AWS TimeStream",
   "main": "index.js",
   "directories": {
