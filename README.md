@@ -66,7 +66,7 @@ Options|Method|Optional|Default value
 *max*|list|yes|15
 *nextToken*|list|yes|
 
-#### create(options)
+#### fastify.timeStreamDatabase.create(options)
 
 ```js
   fastify.timeStreamDatabase.create().then(result => {
@@ -76,7 +76,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### describe(options)
+#### fastify.timeStreamDatabase.describe(options)
 ```js
   fastify.timeStreamDatabase.describe().then(result => {
     console.log(result)
@@ -85,7 +85,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### update(options)
+#### fastify.timeStreamDatabase.update(options)
 ```js
   fastify.timeStreamDatabase.update({ kmsKeyID: 'xxxxxxxxxx' }).then(result => {
     console.log(result)
@@ -94,7 +94,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### del(options)
+#### fastify.timeStreamDatabase.del(options)
 ```js
   fastify.timeStreamDatabase.del().then(result => {
     console.log(result)
@@ -103,7 +103,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### list(options)
+#### fastify.timeStreamDatabase.list(options)
 ```js
   fastify.timeStreamDatabase.list().then(result => {
     console.log(result)
@@ -131,7 +131,7 @@ Options|Method|Optional|Default value
 *dimensions*|write|no|
 *data*|write|no|
 
-#### create(options)
+#### fastify.timeStreamTable.create(options)
 
 ```js
   fastify.timeStreamTable.create().then(result => {
@@ -141,7 +141,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### describe(options)
+#### fastify.timeStreamTable.describe(options)
 ```js
   fastify.timeStreamTable.describe().then(result => {
     console.log(result)
@@ -150,7 +150,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### update(options)
+#### fastify.timeStreamTable.update(options)
 ```js
   fastify.timeStreamTable.update({ hour: 4, days: 30 }).then(result => {
     console.log(result)
@@ -159,7 +159,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### del(options)
+#### fastify.timeStreamTable.del(options)
 ```js
   fastify.timeStreamTable.del().then(result => {
     console.log(result)
@@ -168,7 +168,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### list(options)
+#### fastify.timeStreamTable.list(options)
 ```js
   fastify.timeStreamTable.list().then(result => {
     console.log(result)
@@ -177,7 +177,7 @@ Options|Method|Optional|Default value
   });
 ```
 
-#### write(options)
+#### fastify.timeStreamTable.write(options)
 
 You can collect time series data from connected devices, IT systems, and industrial equipment, and write it into Timestream. Timestream enables you to write data points from a single time series and/or data points from many series in a single write request when the time series belong to the same table.
 
@@ -232,7 +232,7 @@ The following are the benefits of using *multi-measure records*:
 ### Query
 AWS Timestream queries are expressed in a SQL grammar that has extensions for time series-specific support (time series-specific data types and functions), so the learning curve is easy for developers already familiar with SQL.
 
-#### get()
+#### fastify.timeStreamQuery.get()
 Select all Records from table
 
 ```js
@@ -344,7 +344,7 @@ Options|Optional|Default value|Description
 *roleArn*|yes| | Permission
 *s3ErrorReportBucketName*|yes| | If an instance encounters any errors (for example, invalid data which could not be stored), the records that encountered errors are written to an error report in the error report location you specify at creation of a scheduled query. You specify the S3 bucket and prefix for the location. Timestream appends the scheduled query name and invocation time to this prefix to help you identify the errors associated with a specific instance of a scheduled query
 
-##### create(options)
+##### fastify.timeStreamQuery.create(options)
 ```js
 
   const timeColumn = "binned_timestamp";
@@ -412,7 +412,7 @@ Options|Optional|Default value|Description
   });
 ```
 
-##### run(options)
+##### fastify.timeStreamQuery.run(options)
 
 Options|Optional|Default value|Description
 :---|:---|:---|:---
