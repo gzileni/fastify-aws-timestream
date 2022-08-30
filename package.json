@@ -1,6 +1,6 @@
 {
   "name": "fastify-aws-timestream",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fastify plugins for managing databases, tables and querying and creating scheduled queries with AWS TimeStream",
   "main": "index.js",
   "directories": {
@@ -9,13 +9,14 @@
   "scripts": {
     "test:fast": "npm run test:typescript",
     "test": "npm run lint && npm run unit && npm run test:typescript",
-    "lint": "standard --fix && npm run lint:typescript",
-    "lint:typescript": "ts-standard --fix",
+    "lint": "standard && npm run lint:typescript",
+    "lint:typescript": "ts-standard",
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js"
   },
   "keywords": [
-    "AWS"
+    "AWS",
+    "Fastify"
   ],
   "author": "Giuseppe Zileni <giuseppe.zileni@gmail.com>",
   "license": "MIT",
@@ -40,7 +41,7 @@
     "tap": "^16.1.0",
     "ts-standard": "^11.0.0",
     "tsd": "^0.22.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.4.4"
   },
   "tsd": {
     "directory": "test"
