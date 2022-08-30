@@ -15,7 +15,8 @@
     "unit": "tap test/**/*.test.js"
   },
   "keywords": [
-    "AWS"
+    "AWS",
+    "Fastify"
   ],
   "author": "Giuseppe Zileni <giuseppe.zileni@gmail.com>",
   "license": "MIT",
