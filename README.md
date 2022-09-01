@@ -453,6 +453,73 @@ Options|Optional|Default value|Description
   });
 ```
 
+##### fastify.timeStreamQuery.list(options)
+
+Gets a list of all scheduled queries in the caller's Amazon account and Region
+
+Options|Optional|Default value|Description
+:---|:---|:---|:---
+*maxResult*|yes|15|The maximum number of items to return in the output. If the total number of items available is more than the value specified, a NextToken is provided in the output.
+*nextToken*|yes| |A pagination token to resume pagination
+
+```js
+  fastify.timeStreamQuery.list().then(result => {
+    console.log(result)
+  }).catch(e => {
+    console.log(e);
+  });
+```
+
+##### fastify.timeStreamQuery.del(options)
+
+Gets a list of all scheduled queries in the caller's Amazon account and Region
+
+Options|Optional|Default value|Description
+:---|:---|:---|:---
+*scheduledQueryArn*|no| |Scheduled Query Arn
+
+```js
+  fastify.timeStreamQuery.del({
+    scheduledQueryArn: 'xxx:xxxx:xxxx:xxx'
+  }).then(result => {
+    console.log(result)
+  }).catch(e => {
+    console.log(e);
+  });
+```
+
+##### fastify.timeStreamQuery.delAll()
+
+Delete all scheduled queries.
+
+```js
+  fastify.timeStreamQuery.delAll().then(result => {
+    console.log(result)
+  }).catch(e => {
+    console.log(e);
+  });
+```
+
+##### fastify.timeStreamQuery.setOnOff(options)
+
+Enabled or disabled Scheduled Query.
+
+Options|Optional|Default value|Description
+:---|:---|:---|:---
+*scheduledQueryArn*|no| |Scheduled Query Arn
+*disable*|yes|TRUE|State ENABLED or DISABLED Scheduled Query
+
+```js
+  fastify.timeStreamQuery.setOnOff({
+    scheduledQueryArn: 'xxx:xxxx:xxxx:xxx',
+    disable: true
+  }).then(result => {
+    console.log(result)
+  }).catch(e => {
+    console.log(e);
+  });
+```
+
 ## Acknowledgements
 
 - [Developer Guide](https://docs.aws.amazon.com/timestream/latest/developerguide/what-is-timestream.html)
